@@ -1,9 +1,9 @@
 package robboyle.tagger;
 
 import com.google.auto.service.AutoService;
-import com.google.common.collect.Sets;
 
 import java.io.IOException;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -28,7 +28,9 @@ public class TaggerProcessor extends AbstractProcessor {
 
     @Override
     public Set<String> getSupportedAnnotationTypes() {
-        return Sets.newHashSet(Tagger.class.getCanonicalName());
+        Set<String> supportedTypes = new LinkedHashSet<>();
+        supportedTypes.add(Tagger.class.getCanonicalName());
+        return supportedTypes;
     }
 
     @Override

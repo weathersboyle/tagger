@@ -25,5 +25,5 @@ ext {
     groupId = 'robboyle'
     uploadName = 'tagger' //must be same as name of project on binTray
     description = 'annotation processor example'
-    publishVersion = '1.0'
+    publishVersion = '1.0.1'
 }
